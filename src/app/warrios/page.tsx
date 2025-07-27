@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Divider, Input, Select, Tag } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 import { warrios } from "./MapComponent/data";
 import { MapComponent } from "./MapComponent";
 
@@ -19,8 +20,9 @@ export default function WarriosPage() {
         <div className="flex w-full flex-col gap-4 mt-4">
           <div className="flex gap-2">
             <Input
-              className="max-w-[250px]"
-              placeholder="Search by name"
+              className="max-w-[250px] !bg-orange-500 !border-orange-500 placeholder:!text-white !text-white focus:!bg-orange-600 hover:!bg-orange-600 focus:!border-orange-600 hover:!border-orange-600"
+              placeholder="Tìm kiếm - 101"
+              prefix={<SearchOutlined className="text-white" />}
               // value={value.name}
               // onChange={handleSearchChange}
               size="large"
